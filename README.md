@@ -23,7 +23,7 @@ For the second part, make a *VoIP calls* thing. **Important: Make the** ***Voice
 {{Value1}} {{Value2}}
 ```
 
-Next, go to https://ifttt.com/services/maker_webhooks/settings and grab the token in the **URL** section (will look something like https://maker.ifttt.com/use/**zvicdsCSDdSuDXkODmKllkOWZmwhatever** (only the bold/gibbirish part)
+Next, go to https://ifttt.com/services/maker_webhooks/settings and grab the token in the **URL** section (will look something like https://maker.ifttt.com/use/zvicdsCSDdSuDXkODmKllkOWZmwhatever (only the gibbirish part)
 
 After that, make sure you have a Discord Bot, you can make one [here](https://discordapp.com/developers/applications/). You'll need the bot token which can be found in the *bot* section of your application
 
@@ -41,6 +41,6 @@ ALL BELOW ARE REQUIRED
 
 After filling in the information and saving, running the bot should work!
 
-Please star the repo, or even join my [Discord server](https://discord.gg/SuN49rm/) ;)
+> Please star the repo, or even join my [Discord server](https://discord.gg/SuN49rm/) ;)
 
-If you have any problems open an issue or join the server and I'll gladly help
+If you have any problems open an issue or join the server and I'll gladly help!
