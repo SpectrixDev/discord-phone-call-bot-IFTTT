@@ -1,5 +1,5 @@
-# discord-phone-bot-irl-IFTTT
-> Let users call your phone through Discord using IFTTT and Python. Easy to set up and customize
+# discord-phone-call-bot-IFTTT
+> Let users call your actual phone through Discord using IFTTT and Python. Easy to set up and customize
 
 To begin, make sure you have the freshest version of discord.py. You can install this by doing the following:
 
