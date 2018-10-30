@@ -30,8 +30,7 @@ async def call(ctx, *, message):
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
-        await ctx.send(f"**:no_entry: {error}**")
+        await ctx.send(f"Wait *Til* {math.ceil(error.retry_after())} seconds til you can call {bot.owner.name}, kek")
 
 if __name__ == '__main__':
-
     bot.run(config["discordToken"])
