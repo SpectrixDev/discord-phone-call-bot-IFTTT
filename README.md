@@ -43,6 +43,6 @@ ALL BELOW ARE REQUIRED
 
 After filling in the information and saving, running the bot should work!
 
-> Please star the repo, or even join my [Discord server](https://discord.gg/SuN49rm/) ;)
+> Please star the repo, or even join my [Discord server](https://discord.gg/Fb8wZsn) ;)
 
 If you have any problems open an issue or join the server and I'll gladly help!
