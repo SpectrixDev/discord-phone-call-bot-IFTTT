@@ -1,4 +1,7 @@
 # discord-phone-call-bot-IFTTT
+
+## NO, THIS DOES NOT CALL YOUR ACTUAL PHONE NUMBER. IT USES [IFTTT'S VOIP](https://ifttt.com/voip_calls)
+
 > Let users call your actual phone through Discord using IFTTT and Python. Easy to set up and customize.
 
 > Python 3.6+ is required, consider upgrading tho if you haven't already. Python 3.7 is NOT recommended.
