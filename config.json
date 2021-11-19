@@ -1,7 +1,7 @@
 {
     "prefix": ">",
-    "callCoolDown": "30",
-    "eventName": "yours_here",
-    "IFTTTkey": "yOuRS-HErE",
-    "discordToken": "yoUR DisCoRD Bot TOken HerE"
+    "callCoolDown": "",
+    "eventName": "",
+    "IFTTTkey": "",
+    "discordToken": ""
 }
