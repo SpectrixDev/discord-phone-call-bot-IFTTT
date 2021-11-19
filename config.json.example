@@ -1,7 +1,7 @@
 {
-"prefix": 'Used to "talk to" your bot. You can also mention the bot by default to run commands, but you also need a prefix."
-"callCoolDown": "Set a cooldown between how long users can use the call command. I recommend 30 seconds or more (this is per user)"
-"eventName": "The event name from your webhook"
-"IFTTTkey": "The IFTTT token/key that you got from the webhook settings URL thingy"
-"discordToken": "Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)"
+"prefix": '>'
+"callCoolDown": "30"
+"eventName": "fsdfsdg-fdsafasdf"
+"IFTTTkey": "Tgasd4gagigj94egji"
+"discordToken": "MzISDUOFIAJ8EJkfojF8JIDFJOIAUDFIDSFOAIDFJjsdfikosdjUIHJi"
 }
