@@ -3,14 +3,12 @@
 [![python 3.6](https://img.shields.io/badge/python-3.6-red.svg)](https://www.python.org/)
 <br>
 
-> 🤖📞 A discord bot that can call your actual phone through Discord using IFTTT and Python. Easy to set up and customize. Uses IFTT's VOIP applet (not your actual phone number).
+> 🤖📞 A Discord Bot that calls your phone through a Discord command using IFTTT and Python. Simple to configure and tailor to your needs. Utilizes IFTTT's VOIP applet, which doesn't involve your personal phone number.
 
-*Basically unmaintaned, but it still works! (Last checked 19/11/2021)*
+## ℹ Disclaimers:
+1. This is not a serious project, so you may encounter bugs. If you find any, or if you require help, please open up an issue on this repo.
 
-## ℹ Disclaimer:
-*Many people are confused about what this does, so please read the following before continuing*
-
-⚠ No, this does **not phone your phone through an actual phone number**. It uses **[IFTTT'S VOIP (click here to read more)](https://ifttt.com/voip_calls) applet**, which basically means it uses the [IFTTT](https://ifttt.com/about) app. 
+2. This does **not phone your phone through an actual phone number**. It uses **[IFTTT'S VOIP (click here to read more)](https://ifttt.com/voip_calls) applet**, which basically means it uses the [IFTTT](https://ifttt.com/about) app. 
 
 ## 💡 Setup
 
@@ -42,20 +40,20 @@ Next, go to https://ifttt.com/services/maker_webhooks/settings and grab the toke
 Now go to the **config.json** file and fill in the required information. Here's what each piece means (found in config.json.example):
 
 ```json
-
-"prefix": Used to "talk to" your bot. You can also mention the bot by default to run commands, but you also need a prefix.
-"callCoolDown": Set a cooldown between how long users can use the call command. I recommend 30 seconds or more (this is per user)
-"eventName": The event name from your webhook
-"IFTTTkey": The IFTTT token/key that you got from the webhook settings URL thingy
-"discordToken": Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)
+"prefix": String: Used to "talk to" your bot. You can also mention the bot by default to run commands, but you also need a prefix.
+"callCoolDown": Integer: Set a cooldown between how long users can use the call command. I recommend 30 seconds or more (this is per user)
+"maxMsgLength": Integer: The max amount of characters for the message to be read aloud over the phone call. Should be less than 2000, I recommend 250
+"eventName": String: The event name from your webhook
+"IFTTTkey": String: The IFTTT token/key that you got from the webhook settings URL thingy
+"discordToken": String: Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)
 ```
 
 **🎉 After filling in the information and saving, running the bot should work!**
 
-## 🤝 Contributing and other notes
+## 🤝 Contributing
 
 ⭐Please star the repo, or even join my [Discord server](https://discord.gg/Fb8wZsn)
 
-If you have any problems open an issue or join the server and I'll gladly help!
+If you have any problems open an issue, I'll gladly help.
 
 If you'd like to contribute, go ahead!

@@ -1,7 +1,9 @@
 {
-    "prefix": ">",
-    "callCoolDown": "",
+    "prefix": "",
+    "callCoolDown": 30,
+    "maxMsgLength": 250,
     "eventName": "",
     "IFTTTkey": "",
     "discordToken": ""
-}
+    }
+    
