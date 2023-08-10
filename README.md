@@ -40,18 +40,17 @@ Next, go to https://ifttt.com/services/maker_webhooks/settings and grab the toke
 Now go to the **config.json** file and fill in the required information. Here's what each piece means (found in config.json.example):
 
 ```json
-
-"prefix": Used to "talk to" your bot. You can also mention the bot by default to run commands, but you also need a prefix.
-"callCoolDown": Set a cooldown between how long users can use the call command. I recommend 30 seconds or more (this is per user)
-"maxMsgLength": Int: The max amount of characters for the message to be read aloud over the phone call. Should be less than 2000, I recommend 250
-"eventName": The event name from your webhook
-"IFTTTkey": The IFTTT token/key that you got from the webhook settings URL thingy
-"discordToken": Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)
+"prefix": String: Used to "talk to" your bot. You can also mention the bot by default to run commands, but you also need a prefix.
+"callCoolDown": Integer: Set a cooldown between how long users can use the call command. I recommend 30 seconds or more (this is per user)
+"maxMsgLength": Integer: The max amount of characters for the message to be read aloud over the phone call. Should be less than 2000, I recommend 250
+"eventName": String: The event name from your webhook
+"IFTTTkey": String: The IFTTT token/key that you got from the webhook settings URL thingy
+"discordToken": String: Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)
 ```
 
 **🎉 After filling in the information and saving, running the bot should work!**
 
-## 🤝 Contributing and other notes
+## 🤝 Contributing
 
 ⭐Please star the repo, or even join my [Discord server](https://discord.gg/Fb8wZsn)
 
