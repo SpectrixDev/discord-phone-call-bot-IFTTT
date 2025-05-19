@@ -4,5 +4,45 @@
 "maxMsgLength": Integer: The max amount of characters for the message to be read aloud over the phone call. Should be less than 2000, I recommend 250
 "eventName": String: The event name from your webhook
 "IFTTTkey": String: The IFTTT token/key that you got from the webhook settings URL thingy
-"discordToken": String: Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)
+"discordToken": String: Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID),
+
+// Twilio integration fields:
+"twilio_account_sid": String: Your Twilio Account SID,
+"twilio_auth_token": String: Your Twilio Auth Token,
+"twilio_from_number": String: The Twilio phone number to send calls from (in E.164 format, e.g. "+1234567890"),
+"twilio_to_number": String: The phone number to call (in E.164 format, e.g. "+1234567890"),
+
+// Vonage integration fields:
+"vonage_api_key": String: Your Vonage API Key,
+"vonage_api_secret": String: Your Vonage API Secret,
+"vonage_application_id": String: Your Vonage Application ID (optional),
+"vonage_private_key_path": String: Path to your Vonage private.key (optional),
+"vonage_from_number": String: The Vonage phone number to send calls from,
+"vonage_to_number": String: The phone number to call,
+
+// Plivo integration fields:
+"plivo_auth_id": String: Your Plivo Auth ID,
+"plivo_auth_token": String: Your Plivo Auth Token,
+"plivo_from_number": String: The Plivo phone number to send calls from,
+"plivo_to_number": String: The phone number to call,
+
+// ClickSend integration fields:
+"clicksend_username": String: Your ClickSend username,
+"clicksend_api_key": String: Your ClickSend API key,
+"clicksend_to_number": String: The phone number to call,
+"clicksend_voice": String: Voice type (e.g., "female", "male"),
+"clicksend_language": String: Language code (e.g., "en-us", "en-gb"),
+
+// MessageBird integration fields:
+"messagebird_access_key": String: Your MessageBird Access Key,
+"messagebird_from_number": String: The MessageBird number or alphanumeric sender,
+"messagebird_to_number": String: The phone number to call,
+"messagebird_voice": String: Voice type (e.g., "female", "male"),
+"messagebird_language": String: Language code (e.g., "en-us"),
+
+// Sinch integration fields:
+"sinch_key_id": String: Your Sinch Key ID,
+"sinch_key_secret": String: Your Sinch Key Secret,
+"sinch_from_number": String: The Sinch phone number to send calls from,
+"sinch_to_number": String: The phone number to call
 }

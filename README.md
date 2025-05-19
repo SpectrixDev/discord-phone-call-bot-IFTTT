@@ -1,59 +1,78 @@
-# ☎ Discord Phone Call Bot with IFTTT
-[![discord.py](https://img.shields.io/badge/discord-py-red.svg)](https://github.com/Rapptz/discord.py/tree/rewrite)
-[![python 3.6](https://img.shields.io/badge/python-3.6-red.svg)](https://www.python.org/)
-<br>
+# ☎ Discord Phone Call Bot
 
-> 🤖📞 A Discord Bot that calls your phone through a Discord command using IFTTT and Python. Simple to configure and tailor to your needs. Utilizes IFTTT's VOIP applet, which doesn't involve your personal phone number.
+A modular Discord bot that can make phone calls using a variety of providers, including IFTTT, Twilio, Vonage, Plivo, ClickSend, MessageBird, and Sinch. Easily configurable and extensible for new integrations.
 
-## ℹ Disclaimers:
-1. This is not a serious project, so you may encounter bugs. If you find any, or if you require help, please open up an issue on this repo.
+## Features
 
-2. This does **not phone your phone through an actual phone number**. It uses **[IFTTT'S VOIP (click here to read more)](https://ifttt.com/voip_calls) applet**, which basically means it uses the [IFTTT](https://ifttt.com/about) app. 
+- Make phone calls from Discord using multiple providers.
+- Modular design: each provider is a separate cog.
+- Easy configuration via `config.json`.
+- Cooldown and message length limits.
+- Python 3.6+ compatible.
 
-## 💡 Setup
+## Supported Providers & Commands
 
-- This program was made with *Python 3.6*. Newever versions should work, but use at your own risk.
-- Ensure you have [IFTTT](https://ifttt.com/about), which needs to be installed on your mobile device
+| Provider     | Command           | Description                       |
+|--------------|-------------------|-----------------------------------|
+| IFTTT        | `!call`           | Calls via IFTTT VoIP applet       |
+| Twilio       | `!twilio_call`    | Calls using Twilio API            |
+| Vonage       | `!vonage_call`    | Calls using Vonage Voice API      |
+| Plivo        | `!plivo_call`     | Calls using Plivo Voice API       |
+| ClickSend    | `!clicksend_call` | Calls using ClickSend TTS         |
+| MessageBird  | `!messagebird_call` | Calls using MessageBird Voice   |
+| Sinch        | `!sinch_call`     | Calls using Sinch Voice API       |
 
-#### ✅ Install the requirements
-
-```
-pip install -r requirements.txt
-```
-
-> Also, make sure you have a Discord Bot, you can make one [here](https://discordapp.com/developers/applications/). You'll need the bot token which can be found in the *bot* section of your application
-
-#### ⚙ Configuiring IFTTT
-
-Go to [IFTTT](https://ifttt.com/create) and create a new Applet.
-
-For the first part, make a webhook. Name the *event name* whatever you want, but remember it.
-
-For the second part, make a *VoIP calls* thing. **Important: Make the** ***Voice message field*** **(what the robot voice calling you will say) the following:**
+## Project Structure
 
 ```
-{{Value1}} {{Value2}}
+.
+├── bot/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── core.py
+│   └── cogs/
+│       ├── __init__.py
+│       ├── ifttt_call.py
+│       ├── twilio_call.py
+│       ├── vonage_call.py
+│       ├── plivo_call.py
+│       ├── clicksend_call.py
+│       ├── messagebird_call.py
+│       └── sinch_call.py
+├── config.json
+├── config.json.example
+├── requirements.txt
+├── main.py
+└── README.md
 ```
 
-Next, go to https://ifttt.com/services/maker_webhooks/settings and grab the token in the **URL** section (will look something like https://maker.ifttt.com/use/**zvicdsCSDdSuDXkODmKllkOWZmwhatever** (only the gibberish part in bold)
+## Setup
 
-Now go to the **config.json** file and fill in the required information. Here's what each piece means (found in config.json.example):
+1. **Clone the repository and install dependencies:**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-```json
-"prefix": String: Used to "talk to" your bot. You can also mention the bot by default to run commands, but you also need a prefix.
-"callCoolDown": Integer: Set a cooldown between how long users can use the call command. I recommend 30 seconds or more (this is per user)
-"maxMsgLength": Integer: The max amount of characters for the message to be read aloud over the phone call. Should be less than 2000, I recommend 250
-"eventName": String: The event name from your webhook
-"IFTTTkey": String: The IFTTT token/key that you got from the webhook settings URL thingy
-"discordToken": String: Your bot token from the Discord developer portal in the bot section (NOT client secret/client ID)
-```
+2. **Configure your bot:**
+    - Copy `config.json.example` to `config.json`.
+    - Fill in the required fields for the providers you want to use.
+    - You must always set up your Discord bot token and a command prefix.
 
-**🎉 After filling in the information and saving, running the bot should work!**
+3. **Provider Setup:**
+    - For each provider, follow their documentation to obtain API keys, tokens, and phone numbers.
+    - See comments in `config.json.example` for required fields.
 
-## 🤝 Contributing
+4. **Run the bot:**
+    ```sh
+    python main.py
+    ```
 
-⭐Please star the repo, or even join my [Discord server](https://discord.gg/Fb8wZsn)
+## Example `config.json`
 
-If you have any problems open an issue, I'll gladly help.
+See `config.json.example` for all available options and documentation.
 
-If you'd like to contribute, go ahead!
+## Adding New Integrations
+
+- Add a new cog in `bot/cogs/`.
+- Document new config fields in `config.json.example`.
+- Update this README with the new command.
